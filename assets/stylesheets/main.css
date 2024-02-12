@@ -1,0 +1,10 @@
+@font-face {
+    src: url("https://minamotion.org/assets/fonts/font-bitcattoleman.ttf");
+    font-family: "Bitcattoleman"
+}
+.center-child {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
