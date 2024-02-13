@@ -17,8 +17,8 @@ loadFont("Bitcattoleman", "https://minamotion.org/assets/fonts/font-bitcattolema
 class Dialog {
     constructor(dialog = ["This is a dialog example", "This is an array just being processed\nYou can check the source code", "Have a good day!"], delay = 0.05) {
         scene("dialog", () => {
-            this.text = dialog[0]
-            this.dtext = this.text.split("")
+            this.text = ""
+            this.dtext = []
             this.dialogfinished = false
             this.msgbox = add([
                 sprite("msgbox", { width: width() - 12, height: height() / 5 }),
@@ -36,11 +36,14 @@ class Dialog {
                 e.text = this.text
             })
             this.processDialog(delay)
+            this.dtext = dialog.shift().split("")
             onKeyPress("enter", () => {
                 if (dialog.length > 0) {
                     this.text = ""
                     this.dtext = dialog.shift().split("")
                 } else {
+                    this.text = ""
+                    this.dtext = []
                     this.dialogfinished = true
                     this.msgbox.destroy()
                 }
