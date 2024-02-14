@@ -64,4 +64,4 @@ class Dialog {
         }
     }
 }
-new Dialog(["This is a test","FASDFGKJASDKHLLASJHSDOJVF","Love it!"],0.01)
+new Dialog(["","This is a test","FASDFGKJASDKHLLASJHSDOJVF","Love it!"],0.05)
